@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { SpotifyService } from 'src/app/services/spotify.service';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass']
+  styleUrls: ['./sass/login.component.sass']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+
+  constructor(private spotifyService: SpotifyService) {}
+
+
+  ngOnInit(): void {
+  }
+
+  openPageLogin() {
+    window.location.href = this.spotifyService.urlLogin()
+  }
 
 }
