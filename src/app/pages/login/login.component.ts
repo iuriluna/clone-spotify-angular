@@ -13,6 +13,11 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.verificationTokenUrlCallBack()
+  }
+
+  verificationTokenUrlCallBack() {
+    this.spotifyService.TokenUrlCallBack
   }
 
   openPageLogin() {
